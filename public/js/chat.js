@@ -98,8 +98,8 @@ $sendLocationButton.addEventListener('click', () => {
 
     navigator.geolocation.getCurrentPosition((position) => {
         socket.emit('sendLocation', {
-            latitude: position.coords.latitude,
-            longitude: position.coords.longitude
+            lat: position.coords.latitude,
+            long: position.coords.longitude
         }, () => {
             $sendLocationButton.removeAttribute('disabled')
             console.log('Location shared!')  
